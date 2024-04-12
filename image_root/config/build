@@ -2,7 +2,7 @@
 Architecture: amd64
 Archive-Areas: main contrib non-free non-free-firmware
 Distribution: bookworm
-Mirror-Bootstrap: http://ftp.uni-stuttgart.de/debian/
+Mirror-Bootstrap: http://mirror.yandex.ru/debian/
 
 [FIXME]
 Configuration-Version: 1:20170213

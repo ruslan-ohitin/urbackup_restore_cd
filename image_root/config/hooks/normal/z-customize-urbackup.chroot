@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Overwrite /root/start.sh from archive ...
+# Overwrite /root/start.sh from archive https://buildserver.urbackup.org/restore_cd_2_amd64.tar.xz
 
 cat << EOF > /root/start.sh
 #!/bin/sh
