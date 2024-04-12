@@ -49,6 +49,8 @@ mkdir -p /home/urbackup/.ssh
 
 cat << EOF > /home/urbackup/.ssh/authorized_keys
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICxT8HYOXd8rc+rbp4V193BNB00qzHTb65Jipz7Bn0nx kaveo ssh
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEliq3RyHXNdCmR8COHAljMFBHUeIfyTm+3n7z4wyeNW v131m
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOhh0rvvDA2M1y6tA7pr+e6pWMnmfLMV1YsN5GbpBRbV urbackup restore cd
 EOF
 
 chown 1000 /home/urbackup/.ssh/authorized_keys
