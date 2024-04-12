@@ -19,12 +19,19 @@ rm restore_cd.tar.xz
 chmod +x urbackuprestoreclient
 
 mkdir /home/urbackup
+
+cat << EOF > /home/urbackup/root-start.sh
+#!/bin/sh
+sudo /root/start.sh
+EOF
+
 SF="/home/urbackup/.bashrc"
 #echo "#!/bin/sh" > $SF
 echo "setterm -blank 0 -powersave off" > $SF
 echo "if [[ \$(tty) == \"/dev/tty1\" ]]; then" >> $SF
 echo "chvt 1" >> $SF
-echo "sudo /root/start.sh" >> $SF
+#echo "sudo /root/start.sh" >> $SF
+echo "tmux new-session -d -s 'urbackup restore' '/home/urbackup/root-start.sh'" >> $SF
 #echo "shutdown -h now" >> $SF
 #echo "exit 0" >> $SF
 echo "fi" >> $SF
